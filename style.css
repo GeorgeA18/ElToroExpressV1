@@ -1,0 +1,139 @@
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* VARIABLES */
+:root{
+    --background-color: #ffffff;
+    --altura-header: 70px;
+    --altura-footer: 80px;
+    --text-color: #fff;
+}
+
+body{
+    display: grid;
+    height: 100dvh;
+    grid-template-rows: 1fr auto;
+    font-size: 14px;
+}
+
+section{
+    border: 2px solid green;
+    padding: 15px;
+}
+
+
+
+main{
+    margin-top: var(--altura-header);
+    margin-bottom: var(--altura-footer);
+    background-color: aqua;
+}
+
+.carrusel-container{
+    border: 2px solid red;
+    background-color: burlywood;
+    position: relative;
+    height: 300px;
+    padding: 15px;
+}
+
+.carrusel-container .mensaje{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    font-size: 36px;
+}
+
+.servicios-container  div{
+    border: 2px solid greenyellow;
+}
+
+.servicios-container .collage{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+}
+
+.servicios-container .ventas{
+    height: 300px;
+    display: grid;
+    grid-template-rows: 20% auto;
+
+}
+
+.servicios-container .ventas h1{
+    grid-row: 1;
+    grid-column: span 2;
+
+}
+
+.servicios-container .sobre-nosotros, .servicio-despacho, .servicios-bandejas, .servicio-rebanadas{
+    height: 300px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+
+
+
+
+
+
+
+/* ? como la resolucion sobrepasa los 600px de width se aplica */
+/* Estilos para tabletas */
+@media (min-width: 601px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/* Estilos para computadoras de escritorio */
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+    .header{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .header .logo{
+        width: 20%;
+        align-items: center;
+        justify-content: center;
+    }
+    .header .nav-bar{
+        width: 70%;
+        display: flex;
+
+    }
+
+
+    .carrusel-container{
+        height: 500px;
+        
+    }
+
+    .carrusel-container .mensaje{
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%,-50%);
+        font-size: 48px;
+    }
+
+}
