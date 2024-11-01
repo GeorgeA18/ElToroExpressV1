@@ -6,9 +6,9 @@
     padding: 0;
 
 }
-
 html{
     scroll-behavior: smooth;
+    font-family: 'Arial', sans-serif;
 }
 
 /* VARIABLES */
@@ -26,10 +26,6 @@ body{
     font-size: 14px;
 }
 
-section{
-    border: 2px solid green;
-    padding: 15px;
-}
 
 
 
@@ -55,9 +51,6 @@ main{
     font-size: 36px;
 }
 
-.servicios-container  div{
-    border: 2px solid greenyellow;
-}
 
 .servicios-container .collage{
     display: grid;
@@ -89,7 +82,15 @@ main{
 
 
 
+/* ! solo para ver la distribucion de las section y div */
+section{
+    border: 10px solid green;
+    padding: 15px;
+}
 
+section div{
+    border: 2px solid yellow;
+}
 
 
 
