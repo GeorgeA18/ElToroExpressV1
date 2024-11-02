@@ -15,24 +15,22 @@ html{
 :root{
     --background-color: #ffffff;
     --altura-header: 70px;
-    --altura-footer: 80px;
+    --altura-footer: 70px;
     --text-color: #fff;
 }
 
 body{
     display: grid;
     height: 100dvh;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto 1fr auto;
     font-size: 14px;
 }
-
-
-
 
 main{
     margin-top: var(--altura-header);
     margin-bottom: var(--altura-footer);
     background-color: aqua;
+    padding-bottom: var(--altura-footer);
 }
 
 .carrusel-container{
@@ -80,8 +78,6 @@ main{
 }
 
 
-
-
 /* ! solo para ver la distribucion de las section y div */
 section{
     border: 10px solid green;
@@ -106,20 +102,6 @@ section div{
 @media (min-width: 1024px) {
     body {
         font-size: 18px;
-    }
-
-
-    .carrusel-container{
-        height: 500px;
-        
-    }
-
-    .carrusel-container .mensaje{
-        position: absolute;
-        top: 50%;
-        left: 25%;
-        transform: translate(-50%,-50%);
-        font-size: 48px;
     }
 
 }

@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/STYLES/nav_bar_style.css">
-    <link rel="stylesheet" href="/STYLES/footer_style.css">
+    <link rel="stylesheet" href="/styles/login-style.css">
+    <link rel="stylesheet" href="/styles/nav_bar_style.css">
+    <link rel="stylesheet" href="/styles/footer_style.css">
 
     <title>El Toro Express</title>
 </head>
@@ -27,27 +28,68 @@
                 <li><a href="#hola">CREDITO</a></li>
             </ul>
 
-            <button class="inicio-sesion" type="button">
+            <button class="openPopup_login" id="openPopup_login" type="button">
                 INICIAR SESION
             </button>
 
-            <a href="#carrito" class="nav-carrito">
+            <!-- * ICONOS DEL CARRITO -->
+            <a href="/templates/USUARIO/usuario-carrito.html" class="nav-carrito">
                 <img src="/assets/carrito-de-compras.svg" class="nav-icon" alt="carrito">
             </a>
-            
+            <a href="#closeCarrito" class="nav-close-carrito">
+                <img src="/assets/cruz-carrito.svg" class="nav-icon" alt="cerrar carrito">
+            </a>
+
+            <!-- * ICONOS DEL MENU -->
             <a href="#nav-bar" class="nav-hamburger">
                 <img src="/assets/menu-hamburguesa.svg" class="nav-icon" alt="abrir menu">
             </a>
-            <a href="#nav" class="nav-close">
+            <a href="#closeMenu" class="nav-close">
                 <img src="/assets/cruz.svg" class="nav-icon" alt="cerrar menu">
             </a>
-            
-            
         </nav>
     </header>
 
-    
     <main id="main">
+
+        <!-- TODO ventana emergente del login -->
+        <div id="popup_login" class="popup_login">
+            <div class="content_login" id="content_login">
+                <span class="close_login" id="close_login">&times;</span>
+                <h2>login</h2>
+                <p>Este es el contenido de la ventana emergente.</p>
+
+                <button class="openPopup_registro" id="openPopup_registro" type="button">
+                    REGISTRO
+                </button>
+                <button class="openPopup_admin" id="openPopup_admin" type="button">
+                    ADMIN
+                </button>
+            </div>
+        </div>
+        
+
+        <!-- TODO ventana emergente del registro -->
+        <div id="popup_registro" class="popup_registro">
+            <div class="content-registro">
+                <span class="close_registro" id="close_registro">&times;</span>
+                <h1>Registro</h1>
+                <button class="openPopup-login" id="openPopup-login" type="button">
+                    INICIAR SESION
+                </button>
+            </div>
+        </div>
+
+        <!-- TODO ventana emergente del login admin -->
+        <div id="popup_admin" class="popup_admin">
+
+        </div>
+
+
+        
+        <div class="carrito" id="carrito">
+            <h1>CARRITO</h1>
+        </div>
 
         <h1>main</h1>
         
@@ -97,7 +139,6 @@
                 <div>imagen</div>
 
             </div>
-
 
             <div class="nuestros-servicios">
                 <H1>NUESTROS SERVICIOS</H1>
@@ -155,16 +196,107 @@
 
 
         <section class="productos-contanier" id="productos-contanier">
-            <h1>PRODUCTOS</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut natus qui magni iusto distinctio? Molestias nobis eligendi cupiditate quibusdam ducimus inventore debitis, totam ea praesentium quos! Culpa quis distinctio nemo.</p>
+            <div class="pruductos-collage">
+                <h1>PRODUCTOS</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut natus qui magni iusto distinctio? Molestias nobis eligendi cupiditate quibusdam ducimus inventore debitis, totam ea praesentium quos! Culpa quis distinctio nemo.</p>
+            </div>
+
+            <div class="marcas">
+                <img src="" alt="marca">
+                <img src="" alt="marca">
+                <img src="" alt="marca">
+                <img src="" alt="marca">
+                <img src="" alt="marca">
+                <img src="" alt="marca">
+                <img src="" alt="marca">
+                <img src="" alt="marca">
+
+            </div>
+
+            <div class="procductos-catalog-down">
+                <h1>nuestros</h1>
+                <h1>productos</h1>
+                <h1>disponibles</h1>
+            </div>
+
+            <div class="bandejas-container">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eum sit inventore natus dicta. Aperiam eius veritatis sed dolorum quasi alias doloremque non sequi? Soluta dicta aut optio recusandae blanditiis.</p>
+
+            </div>
+
+            <div class="tipos-tablas-container">
+                <div class="producto">
+                    <img src="" alt="imagen tabla">
+                    <div class="info-tabla">
+                        <h1>NOMBRE DEL PRODCUTO</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem eius, in nulla amet debitis quam quis. Iusto corporis iste repellendus aut ipsa, tenetur, reprehenderit ut iure similique autem nemo assumenda!</p>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <div class="info-tabla">
+                        <h1>NOMBRE DEL PRODCUTO</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem eius, in nulla amet debitis quam quis. Iusto corporis iste repellendus aut ipsa, tenetur, reprehenderit ut iure similique autem nemo assumenda!</p>
+                    </div>
+                    <img src="" alt="imagen tabla">
+                </div>
+
+
+                <div class="producto">
+                    <img src="" alt="imagen tabla">
+                    <div class="info-tabla">
+                        <h1>NOMBRE DEL PRODCUTO</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem eius, in nulla amet debitis quam quis. Iusto corporis iste repellendus aut ipsa, tenetur, reprehenderit ut iure similique autem nemo assumenda!</p>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <div class="info-tabla">
+                        <h1>NOMBRE DEL PRODCUTO</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem eius, in nulla amet debitis quam quis. Iusto corporis iste repellendus aut ipsa, tenetur, reprehenderit ut iure similique autem nemo assumenda!</p>
+                    </div>
+                    <img src="" alt="imagen tabla">
+                </div>
+
+
+            </div>
         </section>
 
         <section class="credito-container">
             <h1>CREDITO</h1>
+            <div>
+                <div>
+                    <h1>credito a comercio</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi alias hic eligendi praesentium molestiae. Porro autem minus dolorem commodi laudantium id facilis. Est ipsum vitae, culpa reiciendis libero consequuntur quidem!</p>
+                    <img src="" alt="imagen">
+                </div>
+            </div>
+            <div>
+                <h1>mas imformacion</h1>
+                <div>
+                    <img src="" alt="imagen">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo dolor iusto molestias consectetur minus beatae animi aliquam iste quas? Et, eveniet delectus explicabo officia quaerat eaque. Quibusdam nihil vel dolor!</p>
+                </div>
+                <div>
+                    <img src="" alt="imagen">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo dolor iusto molestias consectetur minus beatae animi aliquam iste quas? Et, eveniet delectus explicabo officia quaerat eaque. Quibusdam nihil vel dolor!</p>
+                </div>
+    
+            </div>
+            <div>
+                <img src="" alt="imagen">
+                <div>
+                    <h1>requisitos</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi molestias laborum voluptate totam maxime velit, exercitationem quod quasi. Excepturi natus similique vel omnis mollitia doloremque eius vero esse numquam totam?</p>
+                </div>
+            </div>
+
+            <div class="formulario-credito">
+                <h1>LLENAR FORMULARIO</h1>
+                <button type="button">ingresa aqui</button>
+            </div>
         </section>
 
-        
-        
     </main>
 
     <footer class="footer" id="footer">
@@ -173,5 +305,10 @@
                 doloremque porro et. Numquam eligendi fugit aliquam officiis porro nesciunt quos enim deserunt!</p>
         </div>
     </footer>
+
+    <script src="/main.js"></script>
+    <script src="/scripts/sesion-registro/login.js"></script>
+    <script src="/scripts/sesion-registro/registro.js"></script>
+    <script src="/scripts/sesion-registro/sesion-admin.js"></script>
 </body>
 </html>
