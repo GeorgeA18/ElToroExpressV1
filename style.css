@@ -24,6 +24,11 @@ body{
     height: 100dvh;
     grid-template-rows: auto 1fr auto;
     font-size: 14px;
+    text-transform: uppercase;
+}
+
+body p{
+    text-transform:lowercase;
 }
 
 main{

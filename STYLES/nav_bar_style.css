@@ -1,4 +1,4 @@
-@import "style.css";
+@import "../style.css";
 
 :root{
     --width-icon:30px;
@@ -61,18 +61,6 @@
 
     opacity: var(--opacity-menu);
     transition: .5s opacity;
-}
-
-.openPopup_login{
-    cursor: pointer;
-    background-color: #333;
-    border-radius: 10px;
-    color: #ffffff;
-    width: 100px;
-    height: 25px;
-    margin: 0 20px 0 20px;
-    font-size: 12px;
-    grid-column: 2;
 }
 
 .carrito{

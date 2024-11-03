@@ -1,20 +1,9 @@
 
 
-/* ? LOGIN */
 
-.openPopup_login ,.openPopup_login2, .openPopup_login3{
-    cursor: pointer;
-    background-color: #333;
-    border-radius: 10px;
-    color: #ffffff;
-    width: 100px;
-    height: 25px;
-    margin: 0 20px 0 20px;
-    font-size: 12px;
-    grid-column: 2;
-}
+/* ? ADMIN */
 
-.popup_login {
+.popup_admin {
     display: none; /* Oculta la ventana emergente por defecto */
     position: fixed; /* Posiciona la ventana emergente */
     left: 0;
@@ -27,7 +16,7 @@
     transition: opacity 0.3s ease; /* Transición de opacidad */
 }
 
-.popup_login .content_login {
+.popup_admin .content_admin {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -43,21 +32,9 @@
     height: 50%;
 }
 
-.close_login {
+.close_admin {
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón de cerrar */
     float: right;
     font-size: 20px;
 }
 
-
-
-
-/* ? ADMIN */
-.openPopup_admin{
-    cursor: pointer;
-    background-color: #333;
-    border-radius: 10px;
-    color: #ffffff;
-    width: 100px;
-    height: 25px;
-}
