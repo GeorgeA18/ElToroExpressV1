@@ -17,6 +17,9 @@ html{
     --altura-header: 70px;
     --altura-footer: 70px;
     --text-color: #fff;
+    --color_primary: rgb(32,23,51);
+    --color_secondary: rgb(255,203,143);
+
 }
 
 body{
@@ -24,7 +27,6 @@ body{
     height: 100dvh;
     grid-template-rows: auto 1fr auto;
     font-size: 14px;
-    text-transform: uppercase;
 }
 
 body p{

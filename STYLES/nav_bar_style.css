@@ -10,7 +10,7 @@
     --state-close-menu: scale(0);
 
     --state-menu: translate(-100%);
-    --opacity-menu: 0;
+    --opacity_menu: 0;
 
     --altura-div: 50px;
 }
@@ -29,37 +29,42 @@
     color: rgb(0, 0, 0); 
 }
 
-.header .logo{
-    height: inherit;
-
+.header .nav_logo{
     background-color:rgb(114, 225, 225);
     color: #ffffff;
-    border: 2px Solid red; 
+    border: 2px Solid red;
+    justify-content: center;
+    align-items: center;
 }
 
 .header .nav-container{
     padding: 0 30px 0 30px;
     width: 100%;
-
 }
 
-.header .nav-bar{
+.header .nav_bar{
     padding: 0 5px 0 5px;
     height: inherit;
     display: grid;
-    justify-content: space-between;
-    align-items: center;
-    grid-template-columns:  repeat(4, max-content);
 
-    background-color: azure;
+    align-items: center;
+    justify-content:space-between;
+    grid-template-columns: auto auto repeat(2, 40px);
+
+    background-color: var(--color_secondary);
     border: 2px solid red;
 }
 
-.header .nav-bar .nav-links li a{
+.header .nav_bar .nav-carrito, .nav-close-carrito, .nav-hamburger, .nav-close{
+    width: 30px;
+    margin-left: 5px;
+}
+
+.header .nav_bar .nav_links li a{
     text-decoration: none;
     color: rgb(248, 248, 248);
 
-    opacity: var(--opacity-menu);
+    opacity: var(--opacity_menu);
     transition: .5s opacity;
 }
 
@@ -69,7 +74,7 @@
 }
 
 
-.nav-links{
+.nav_links{
     list-style: none;
     position: absolute;
     top: var(--altura-header);
@@ -114,11 +119,11 @@
     transform: var(--state-close-carrito);
 }
 
-.nav-bar:target{
+.nav_bar:target{
     --state-close-menu: scale(1);
     --state-hamburguer: scale(0);
     --state-menu: translate(0);
-    --opacity-menu: 1;
+    --opacity_menu: 1;
 }
 .nav-hamburger,
 .nav-close{
@@ -135,11 +140,11 @@
 
 
 /* ? animacion para agrandar los botones del menu */
-.header .nav-bar .nav-links li{
+.header .nav_bar .nav_links li{
     transition: scale 0.3s ease-in-out;
     scale: 1;
 }
-.header .nav-bar .nav-links li:hover{
+.header .nav_bar .nav_links li:hover{
     transition: scale 0.3s ease-in-out;
     scale: 1.2;
 }
@@ -147,7 +152,7 @@
 
 
 /* TODO botones de carrito y menu */
-.header .nav-bar a{
+.header .nav_bar a{
     height: 30px;   
 }
 
@@ -160,16 +165,100 @@
 
 /* ? como la resolucion sobrepasa los 600px de width se aplica */
 /* Estilos para tabletas */
-@media (min-width: 601px) {
+
+@media (min-width: 370px) {
+    .header .nav_bar{  
+        background-color: #ff0000;
+    }
+}
+@media (min-width: 820px) {
     body {
         font-size: 16px;
     }
+
+    .nav_logo{
+        grid-column: 1;
+    }
+    .header .nav_bar .nav-hamburger, .nav-close{
+        display: none;
+    }
+    
+
+    .header .nav_bar{
+        grid-template-columns: auto auto auto auto;
+
+    }
+
+    .nav_links{
+        all: unset;
+    }
+    .header .nav_bar .nav_links{
+        margin: 0;
+        list-style: none;
+        position: relative;
+
+        height: 100%;
+        width:auto;
+        opacity: 1;
+        
+        background-color: #c99a9a;
+        border: 2px solid rgb(191, 255, 0);
+        color: rgb(0, 0, 0);
+        display: grid;
+        grid-column: 2;
+        align-items: center;
+
+        grid-template-rows: 1;
+        grid-template-columns: repeat(5, auto);
+        justify-content: space-around;
+        --opacity_menu: 1;
+    }
+
+    .nav_links li{
+        color: rgb(0, 0, 0);
+    }
+
+    .header .nav_bar .nav_links li a{
+        opacity: 1;
+        margin: 0 0 0 10px;
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        
+    }
+
+    .openPopup_login{
+        grid-column: 3;
+        margin: 0 0 0 10px;
+    }
+
+    .nav-carrito, .nav-close-carrito{
+        grid-column: 4;
+        
+    }
+    
+
+    
 }
 
 /* Estilos para computadoras de escritorio */
 @media (min-width: 1024px) {
     body {
         font-size: 18px;
+    }
+
+    .header .nav_bar{
+        padding-left: 20px;
+        padding-right: 30px;
+        grid-template-columns: auto 70% 150px 40px;
+    }
+
+    .header .nav_bar .nav_links{
+        top: 2px;
+        grid-template-columns: repeat(5, auto);
+        gap: 25px;
+        padding-left: 30px;
+        justify-content: flex-end;
+        background-color: var(--color_secondary);
     }
     
 }

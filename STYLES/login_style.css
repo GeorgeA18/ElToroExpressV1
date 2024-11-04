@@ -1,8 +1,21 @@
 
 
-/* ? ADMIN */
+/* ? LOGIN */
 
-.close_admin {
+/* boton del nav bar */
+.openPopup_login{
+    cursor: pointer;
+    background-color: var(--color_primary);
+    border-radius: 10px;
+    color: #ffffff;
+    width: 120px;
+    height: 25px;
+    font-size: 12px;
+    margin: 0 20px 0 20px;
+    grid-column: 2;
+}
+
+.close_login {
     position: absolute;
     cursor: pointer; 
     top: 0px;
@@ -10,7 +23,8 @@
     font-size: 40px;
 }
 
-.popup_admin {
+
+.popup_login {
     display: none; /* Oculta la ventana emergente por defecto */
     position: fixed; /* Posiciona la ventana emergente */
     left: 0;
@@ -23,7 +37,7 @@
     transition: opacity 0.3s ease; /* Transición de opacidad */
 }
 
-.popup_admin .content_admin {
+.popup_login .content_login {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -45,7 +59,7 @@
 
 
 
-.content_admin .admin_form{
+.content_login .login_form{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -55,12 +69,12 @@
     padding: 10px;
 }
 
-.admin_form label{
+.login_form label{
     width: 100%;
     margin-bottom: 5px;
 }
 
-.admin_form input{
+.login_form input{
     width: 100%;
     height: 30px;
     margin-bottom: 10px;
@@ -72,30 +86,35 @@
     transition: all 0.1s cubic-bezier(0.645, 0.045, 0355, 1);
 }
 
-.adminSesion[type="submit"]{
+.ingresar[type="submit"]{
     margin-top: 10px;
-    color: var(--color_primary);
     background-color: var(--color_secondary);
 }
 
-.adminSesion:hover{
+.ingresar:hover{
     box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.5);
     transition: all .3s ease;
 }
-.adminSesion:active{
+.ingresar:active{
     box-shadow: unset;
     transition: all .1s ease;
 }
-.content_admin p{
+.content_login p{
     margin-bottom: 5px ;
 }
-.popup_admin .content_admin p,button{
+.popup_login .content_login p,button{
     font-size: 12px;
 }
 
-.openPopup_registro{
+.openPopup_registro, .openPopup_admin{
     cursor: pointer;
     color: #003DFF;
     background-color: #ffffff;
     border: none;
 }
+
+
+
+
+
+

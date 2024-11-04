@@ -33,12 +33,11 @@ const closePopup_admin =document.getElementById("close_admin");
 
 // Abre la ventana emergente al hacer clic en el botón
 openPopup_login.addEventListener('click', () => {
-    console.log("inicio 1");
     abrirVentana(popup_login, popupContent_login);
 });
 
 // Cierra la ventana emergente al hacer clic en el botón de cerrar
-closePopup_login.addEventListener('click', (event) => {
+closePopup_login.addEventListener('click', () => {
     cerrarVentana(popup_login, popupContent_login);
 });
 
@@ -46,9 +45,9 @@ closePopup_login.addEventListener('click', (event) => {
 window.addEventListener('click', (event) => {
     if (event.target === popup_login) {
         popup_login.style.opacity = '0'; 
-        popupContent_login.style.transform = 'translate(-50%, -50%) scale(0)'; // Escala a 0
+        popupContent_login.style.transform = 'translate(-50%, -50%) scale(0)'; 
         setTimeout(() => {
-            popup_login.style.display = 'none'; // Oculta la ventana emergente después de la animación
+            popup_login.style.display = 'none'; 
         }, 300); // Espera a que la animación termine
     }
 });
@@ -56,39 +55,31 @@ window.addEventListener('click', (event) => {
 
 /* PARA LA VENTANA DE REGISTRO */
 /* abrir con el boton de la ventana de registro */
-openPopup_login2.addEventListener('click', (event) => {
-    console.log("inicio2");
-
+openPopup_login2.addEventListener('click', () => {
     cerrarVentana(popup_registro, popupContent_registro);
     abrirVentana(popup_login, popupContent_login);
 });
 
 /* Abrir con el boton de la venta de admin */
-openPopup_login3.addEventListener("click", (event) => {
+openPopup_login3.addEventListener("click", () => {
     cerrarVentana(popup_admin, popupContent_admin);
     abrirVentana(popup_login, popupContent_login);
 });
 
 
 // Abre la ventana emergente al hacer clic en el botón
-openPopup_registro.addEventListener('click', (event) => {
-    console.log("registro 1");
+openPopup_registro.addEventListener('click', () => {
     cerrarVentana(popup_login, popupContent_login);
     abrirVentana(popup_registro, popupContent_registro);
 });
 
 // Cierra la ventana emergente al hacer clic en el botón de cerrar
 closePopup_registro.addEventListener('click', () => {
-    popup_registro.style.opacity = '0'; // Cambia la opacidad a 0
-    popupContent_registro.style.transform = 'translate(-50%, -50%) scale(0)'; // Escala a 0
-    setTimeout(() => {
-        popup_registro.style.display = 'none'; // Oculta la ventana emergente después de la animación
-    }, 300); // Espera a que la animación termine
+    cerrarVentana(popup_registro, popupContent_registro);
 });
 
 // Cierra la ventana emergente si se hace clic fuera de ella
 window.addEventListener('click', (event) => {
-
     if (event.target === popup_registro) {
         popup_registro.style.opacity = '0'; 
         popupContent_registro.style.transform = 'translate(-50%, -50%) scale(0)'; // Escala a 0
@@ -98,20 +89,27 @@ window.addEventListener('click', (event) => {
     }
 });
 
-
-
 /* PARA LA VENTANA DE ADMIN */
 openPopup_admin.addEventListener("click", () =>{
-    console.log("abrir admin boton")
     cerrarVentana(popup_login ,popupContent_login);
     abrirVentana(popup_admin, popupContent_admin);
 });
 
+closePopup_admin.addEventListener("click", () => {
+    cerrarVentana(popup_admin, popupContent_admin);
+})
 
-
+window.addEventListener("click", (event) => {
+    if (event.target === popup_admin) {
+        popup_admin.style.opacity = "0";
+        popupContent_admin.style.transform = 'translate(-50%, -50%) scale(0)';
+        setTimeout(() => {
+            popup_admin.style.display = 'none';
+        }, 300); 
+    }
+})
 
 /*--------------------- Todo Funciones para abrir cerrar las ventanas ----------------------------- */
-
 function abrirVentana(popupVentana, popupContent) {
     console.log("abierta ventana por funcion.")
 
