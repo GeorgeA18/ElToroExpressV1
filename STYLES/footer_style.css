@@ -9,7 +9,7 @@
     align-items: center;
     
     height: var(--altura-footer);
-    background-color: blue;
+    background-color: var(--color_primary);
     color: white; 
     z-index: 1000; 
 }

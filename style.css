@@ -20,6 +20,10 @@ html{
     --color_primary: rgb(32,23,51);
     --color_secondary: rgb(255,203,143);
 
+    --query1: 370px;
+    --query2: 820px;
+    --query3: 1024px;
+
 }
 
 body{
@@ -40,6 +44,11 @@ main{
     padding-bottom: var(--altura-footer);
 }
 
+section{
+    margin-bottom: 30px;
+    background-color: rgb(2, 87, 87);
+}
+
 .carrusel-container{
     border: 2px solid red;
     background-color: burlywood;
@@ -57,26 +66,21 @@ main{
 }
 
 
-.servicios-container .collage{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-}
 
-.servicios-container .ventas{
+.servicios_container .ventas{
     height: 300px;
     display: grid;
     grid-template-rows: 20% auto;
 
 }
 
-.servicios-container .ventas h1{
+.servicios_container .ventas h1{
     grid-row: 1;
     grid-column: span 2;
 
 }
 
-.servicios-container .sobre-nosotros, .servicio-despacho, .servicios-bandejas, .servicio-rebanadas{
+.servicios_container .sobre_nosotros, .servicio-despacho, .servicios-bandejas, .servicio-rebanadas{
     height: 300px;
     width: auto;
     display: grid;
@@ -87,8 +91,11 @@ main{
 
 /* ! solo para ver la distribucion de las section y div */
 section{
-    border: 10px solid green;
-    padding: 15px;
+    border: 6px solid green;
+}
+
+section article{
+    border: 10px solid rgb(0, 21, 255);
 }
 
 section div{

@@ -1,0 +1,59 @@
+
+.servicios_container .sobre_nosotros{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.nuestros_servicios h1{
+    font-size: 42px;
+}
+
+.servicios_container .nuestros_servicios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.servicios_container .nuestros_servicios .nuestros_servicios_content{
+    display: grid;
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.nuestros_servicios_content div{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+.nuestros_servicios_content div img{
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+
+.servicios_container .collage{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%; 
+    height: 300px; 
+    overflow: hidden;
+}
+
+.collage .imagen_collage{
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
