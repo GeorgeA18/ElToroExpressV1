@@ -45,26 +45,9 @@ main{
 }
 
 section{
-    margin-bottom: 30px;
-    background-color: rgb(2, 87, 87);
+    margin-bottom: 20px;
+    background-color: rgb(121, 0, 220);
 }
-
-.carrusel-container{
-    border: 2px solid red;
-    background-color: burlywood;
-    position: relative;
-    height: 300px;
-    padding: 15px;
-}
-
-.carrusel-container .mensaje{
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%,-50%);
-    font-size: 36px;
-}
-
 
 
 .servicios_container .ventas{
@@ -80,7 +63,7 @@ section{
 
 }
 
-.servicios_container .sobre_nosotros, .servicio-despacho, .servicios-bandejas, .servicio-rebanadas{
+.servicios_container .servicio-despacho, .servicios-bandejas, .servicio-rebanadas{
     height: 300px;
     width: auto;
     display: grid;
@@ -97,19 +80,27 @@ section{
 section article{
     border: 10px solid rgb(0, 21, 255);
 }
-
+/* 
 section div{
     border: 2px solid yellow;
 }
-
+ */
 
 
 /* ? como la resolucion sobrepasa los 600px de width se aplica */
 /* Estilos para tabletas */
-@media (min-width: 601px) {
+
+@media (min-width: 370px) {
+    .header .nav_bar{  
+        background-color: #ff0000;
+    }
+}
+@media (min-width: 820px) {
     body {
         font-size: 16px;
     }
+
+    
 }
 
 /* Estilos para computadoras de escritorio */

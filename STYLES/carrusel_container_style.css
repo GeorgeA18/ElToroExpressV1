@@ -1,0 +1,165 @@
+
+
+.slider_container{
+    background-color: burlywood;
+    position: relative;
+    padding: 5px;
+    height: 217px;
+    padding: 0;
+    border: none;
+}
+
+.slider_container .mensaje{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    
+    font-size: 24px;
+    color: #d5d5d5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slider {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: inherit;
+    max-width: 800px; /* Ancho máximo del slider */
+    overflow: hidden; /* Oculta el contenido que sobresale */
+}
+
+.slides {
+    display: flex; /* Muestra las slides en línea */
+    transition: transform 0.5s ease; /* Transición suave al cambiar de slide */
+}
+
+.slide {
+    min-width: 100%;
+    object-fit: cover;
+}
+
+
+.slides img, video {
+    width: 100%; /* Asegura que las imágenes y videos ocupen todo el ancho */
+    height: 220px; /* Mantiene la relación de aspecto */
+    object-fit: cover;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev {
+    left: 10px;
+    z-index: 1000;
+}
+
+.next {
+    right: 10px;
+    z-index: 1000;
+}
+
+
+/* ? como la resolucion sobrepasa los 600px de width se aplica */
+/* Estilos para tabletas */
+
+@media (min-width: 370px) {
+    .header .nav_bar{  
+        background-color: #ff0000;
+    }
+}
+@media (min-width: 820px) {
+    body {
+        font-size: 16px;
+    }
+    
+}
+
+/* Estilos para computadoras de escritorio */
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    .slider_container{
+        background-color: burlywood;
+        position: relative;
+        padding: 5px;
+        height: 617px;
+        padding: 0;
+        border: none;
+    }
+    
+    .slider_container .mensaje{
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%,-50%);
+        z-index: 1000;
+        
+        font-size: 56px;
+        color: #d5d5d5;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .slider {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: inherit;
+        max-width: 1920px;
+        min-width: 900px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .slides {
+        display: flex; /* Muestra las slides en línea */
+        transition: transform 0.5s ease; /* Transición suave al cambiar de slide */
+    }
+    
+    .slide {
+        min-width: 100%;
+        object-fit: cover;
+    }
+    
+    
+    .slides img, video {
+        width: 100%; /* Asegura que las imágenes y videos ocupen todo el ancho */
+        height: 620px; /* Mantiene la relación de aspecto */
+        object-fit: cover;
+    }
+    
+    .slider button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .prev {
+        left: 40px;
+        z-index: 1000;
+    }
+    
+    .next {
+        right: 40px;
+        z-index: 1000;
+    }
+    
+    
+
+}
