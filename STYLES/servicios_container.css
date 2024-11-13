@@ -1,48 +1,37 @@
 
+:root{
+    --padding_servicios: 30px;
+    --padding_servicios_img: 40px;
+    --font_titulo: 24px;
+    
+}
+
 .servicios_container .sobre_nosotros{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 200px;
-    margin: 10px;
+    height: 220px;
+    padding: 15px;
     gap: 5px;
 }
-
-.imagen_sobre_nosotros{
+.imagen_content{
     width: 50%;
     height: 200px;
     overflow: hidden;
-    border-radius: 50px 0px ;
+    border-radius: var(--padding_servicios_img) 0px;
 }
-
-.sobre_nosotros div img{
+.sobre_nosotros .imagen_content img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
 }
-
+.sobre_nosotros h1{
+    font-size: var(--font_titulo);
+}
 .sobre_nosotros .info{
     width: 50%;
     padding: 10px;
-}
-
-
-.servicios_container .collage{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    width: 100%; 
-    height: 300px; 
-    overflow: hidden;
-}
-
-.collage .imagen_collage{
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover;
 }
 
 
@@ -51,41 +40,39 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    background-color: rgb(88, 0, 160);
+    padding: 15px;
 }
-
 .nuestros_servicios h1{
-    font-size: 42px;
+    font-size: 36px;
 }
-
 .servicios_container .nuestros_servicios .nuestros_servicios_content{
     width: 100%;
     display: grid;
-    background-color: rgb(255, 255, 255);
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-}
+    gap: 15px;
 
+    padding-top: 10px;
+}
 .nuestros_servicios_content div{
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
-}
-
-.nuestros_servicios_content div img{
-    height: 100%;
-    width: 100%;
+    background-color: azure;
+    border-radius: 40px 0px ;
     overflow: hidden;
+}
+.nuestros_servicios_content div img{
+    height: 90%;
+    width: 90%;
     object-fit: cover;
 }
 
 
 .servicios_container .collage{
-    margin-top: 10px;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -93,35 +80,62 @@
     height: 300px; 
     overflow: hidden;
 }
-
 .collage .imagen_collage{
     width: 100%; 
     height: 100%; 
     object-fit: cover;
 }
-
-
-
-/* ? como la resolucion sobrepasa los 600px de width se aplica */
-/* Estilos para tabletas */
-
-@media (min-width: 370px) {
-    .header .nav_bar{  
-        background-color: #ff0000;
-    }
-}
-@media (min-width: 820px) {
-    body {
-        font-size: 16px;
-    }
-
-    
+.collage h1{
+    position: absolute;
+    transform: translateY(50%);
+    color: azure;
+    z-index: 1000;
+    font-size: 32px;
 }
 
-/* Estilos para computadoras de escritorio */
-@media (min-width: 1024px) {
-    body {
-        font-size: 18px;
-    }
-
+.servicios_container .servicio_despacho{
+    padding: 15px;
 }
+.servicios_container .servicio_despacho .servicio_despacho_content, .ventas, .servicios_bandejas, .servicio_rebanadas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    padding: 15px;
+    gap: 5px;
+}
+.servicio_despacho_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    padding: 15px;
+    gap: 5px;
+    background-color: blueviolet;
+    border-radius: var(--padding_servicios) 0px;
+}
+.servicio_despacho .imagen_content{
+    width: 50%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: var(--padding_servicios_img) 0px;
+}
+.servicio_despacho_content .imagen_content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.servicio_despacho_content h1{
+    font-size: var(--font_titulo);
+}
+.servicio_despacho_content .info{
+    width: 50%;
+    padding: 10px;
+}
+
+
+
+

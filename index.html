@@ -7,15 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/styles/login_style.css">
-    <link rel="stylesheet" href="/styles/register_style.css">
     <link rel="stylesheet" href="/styles/admin_login_style.css">
-
-
     <link rel="stylesheet" href="/styles/nav_bar_style.css">
 
     <link rel="stylesheet" href="/styles/carrusel_container_style.css">
     <link rel="stylesheet" href="/styles/servicios_container.css">
+    <link rel="stylesheet" href="/styles/productos_contanier_style.css">
+
 
     <link rel="stylesheet" href="/styles/footer_style.css">
 
@@ -142,6 +140,7 @@
             
         </div>
 
+        <!-- TODO CARRUSEL -->
         <section class="slider_container" id="carrusel_container">
 
             <div class="mensaje">
@@ -175,8 +174,9 @@
 
 
         <section class="servicios_container" id="servicios_container">
+            
             <div class="sobre_nosotros">
-                <div class="imagen_sobre_nosotros">
+                <div class="imagen_content">
                     <img src="/src/img/collage.jpg" alt="">
                 </div>
 
@@ -216,22 +216,26 @@
             </article>
 
             <div class="collage">
+                <h1>COLLAGE</h1>
                 <img src="/src/img/collage.jpg" alt="" class="imagen_collage">
+            </div>
+
+            <article class="servicio_despacho">
+                <div class="servicio_despacho_content">
+                    <div class="info">
+                        <h1>SERVICIO</h1>
+                        <h1>DESPACHO</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam error, tempore corporis alias modi dicta, necessitatibus neque aliquid dolor ab corrupti. Laboriosam ratione .</p>
+                    </div>
+    
+                    <div class="imagen_content">
+                        <img src="/src/img/servicios_despacho.jpg" alt="">
+                    </div>
+                </div>
                 
-            </div>
+            </article>
 
-            <div class="servicio-despacho">
-                <div>
-                    <h1>SERVICIO DE <br>DESPACHO</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse iure eum nihil possimus, quisquam officiis impedit inventore exercitationem vero nulla! Expedita inventore voluptas ipsum tempore voluptatibus nesciunt in, deserunt natus!</p>
-                </div>
-
-                <div class="imagen-servicio-despacho">
-                    <h1>IMAGEN</h1>
-                </div>
-            </div>
-
-            <div class="ventas">
+            <article class="ventas">
                 <H1>VENTAS AL  <br> MAYOR Y DETAL</H1>
                 <div>
                     <h1>MAYOR</h1>
@@ -241,9 +245,9 @@
                     <h1>DETAL</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab tempore illum fugiat! Adipisci aliquid nostrum dolores neque ut itaque praesentium officia, earum illum eius! Voluptatibus consequatur aperiam perferendis delectus asperiores?</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="servicios-bandejas">
+            <article class="servicios_bandejas">
                 <div class="imagen-servicio-bandejas">
                     <h1>IMAGEN</h1>
                 </div>
@@ -253,9 +257,9 @@
                 </div>
 
                 
-            </div>
+            </article>
 
-            <div class="servicio-rebanadas">
+            <article class="servicio_rebanadas">
                 <div>
                     <h1>SERVICIO DE <br>REBANADAS</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse iure eum nihil possimus, quisquam officiis impedit inventore exercitationem vero nulla! Expedita inventore voluptas ipsum tempore voluptatibus nesciunt in, deserunt natus!</p>
@@ -264,13 +268,13 @@
                 <div class="imagen-servicio-rebanadas">
                     <h1>IMAGEN</h1>
                 </div>
-            </div>
+            </article>
 
         </section>
 
 
-        <section class="productos-contanier" id="productos-contanier">
-            <div class="pruductos-collage">
+        <section class="productos_contanier" id="productos_contanier">
+            <div class="productos_collage">
                 <h1>PRODUCTOS</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut natus qui magni iusto distinctio? Molestias nobis eligendi cupiditate quibusdam ducimus inventore debitis, totam ea praesentium quos! Culpa quis distinctio nemo.</p>
             </div>
@@ -287,28 +291,34 @@
 
             </div>
 
-            <div class="procductos-catalog-down">
+            <div class="productos_catalog_down">
                 <h1>nuestros</h1>
                 <h1>productos</h1>
                 <h1>disponibles</h1>
             </div>
 
-            <div class="bandejas-container">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eum sit inventore natus dicta. Aperiam eius veritatis sed dolorum quasi alias doloremque non sequi? Soluta dicta aut optio recusandae blanditiis.</p>
+            <div class="bandejas_container">
+                <div class="titulo"><h1>BANDEJAS</h1></div>
+                <div class="info">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eum sit inventore natus dicta. Aperiam eius veritatis sed dolorum quasi alias doloremque non sequi? Soluta dicta aut optio recusandae blanditiis.</p>
+                    <h1>VER CATALOGO</h1>
+                    <button type="button"><a href="/subpages/CATALOGO_BANDEJAS/catalogo.html">Catalogo</a></button>
+                </div>
+                
 
             </div>
 
-            <div class="tipos-tablas-container">
+            <div class="tipos_tablas_container">
                 <div class="producto">
                     <img src="" alt="imagen tabla">
-                    <div class="info-tabla">
+                    <div class="info_tabla">
                         <h1>NOMBRE DEL PRODCUTO</h1>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem eius, in nulla amet debitis quam quis. Iusto corporis iste repellendus aut ipsa, tenetur, reprehenderit ut iure similique autem nemo assumenda!</p>
                     </div>
                 </div>
 
                 <div class="producto">
-                    <div class="info-tabla">
+                    <div class="info_tabla">
                         <h1>NOMBRE DEL PRODCUTO</h1>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem eius, in nulla amet debitis quam quis. Iusto corporis iste repellendus aut ipsa, tenetur, reprehenderit ut iure similique autem nemo assumenda!</p>
                     </div>
@@ -318,14 +328,14 @@
 
                 <div class="producto">
                     <img src="" alt="imagen tabla">
-                    <div class="info-tabla">
+                    <div class="info_tabla">
                         <h1>NOMBRE DEL PRODCUTO</h1>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem eius, in nulla amet debitis quam quis. Iusto corporis iste repellendus aut ipsa, tenetur, reprehenderit ut iure similique autem nemo assumenda!</p>
                     </div>
                 </div>
 
                 <div class="producto">
-                    <div class="info-tabla">
+                    <div class="info_tabla">
                         <h1>NOMBRE DEL PRODCUTO</h1>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem eius, in nulla amet debitis quam quis. Iusto corporis iste repellendus aut ipsa, tenetur, reprehenderit ut iure similique autem nemo assumenda!</p>
                     </div>
@@ -336,7 +346,7 @@
             </div>
         </section>
 
-        <section class="credito-container">
+        <section class="credito_container">
             <h1>CREDITO</h1>
             <div>
                 <div>
@@ -365,7 +375,7 @@
                 </div>
             </div>
 
-            <div class="formulario-credito">
+            <div class="formulario_credito">
                 <h1>LLENAR FORMULARIO</h1>
                 <button type="button">ingresa aqui</button>
             </div>

@@ -23,14 +23,11 @@
     height: var(--altura-header);
     display: flex;
     align-items: center;
-    z-index: 1000; 
-
-    background-color: #333; 
+    z-index: 3000; 
     color: rgb(0, 0, 0); 
 }
 
 .header .nav_logo{
-    background-color:rgb(114, 225, 225);
     color: #ffffff;
     border: 2px Solid red;
     justify-content: center;
@@ -52,7 +49,6 @@
     grid-template-columns: auto auto repeat(2, 40px);
 
     background-color: var(--color_secondary);
-    border: 2px solid red;
 }
 
 .header .nav_bar .nav-carrito, .nav-close-carrito, .nav-hamburger, .nav-close{
@@ -166,9 +162,9 @@
 /* ? como la resolucion sobrepasa los 600px de width se aplica */
 /* Estilos para tabletas */
 
-@media (min-width: 370px) {
+@media (min-width: 390px) {
     .header .nav_bar{  
-        background-color: #ff0000;
+        background-color: var(--color_secondary);
     }
 }
 @media (min-width: 820px) {

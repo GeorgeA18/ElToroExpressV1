@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/subpages/ADMIN/admin_style.css">
+    <title>Admin</title>
+</head>
+<body>
+    
+    <header id="header">
+        <h1>Shopping Car</h1>
+    </header>
+    <main>
+        <div class="contenedor">
+            <!-- TODO añadir Producto -->
+            <div class="anadir">
+                <h2>Añadir</h2>
+                <form>
+                    <label>Nombre del Producto</label>
+                    <input type="text" id="productoAnadir" name="nombreDelProducto">
+
+                    <label>Valor de Prodcuto</label>
+                    <input type="text" id="valorAnadir">
+
+                    <label>Existencia</label>
+                    <input type="text" id="existenciaAnadir">
+
+                    <label>Url Imagen</label>
+                    <input type="text" id="imagenAnadir">
+
+                    <input class="button" type="button" id="botonAnadir" value="Añadir">
+                </form>
+
+            </div>
+
+            <!-- TODO editar Producto -->
+            <div class="editar">
+                <h2>Editar</h2>
+                <form>
+                    <label>Nombre del Producto</label>
+                    <select id="productoEditar">
+                        <option value="">---</option>
+                    </select>
+
+                    <label>Atributo</label>
+                    <select id="atributoEditar">
+                        <option value="">---</option>
+                    </select>
+
+                    <label>Nuevo valor</label>
+                    <input type="text" id="nuevoAtributo">
+
+                    <input class="button" type="button" id="botonEditar" value="Editar">
+                </form>
+            </div>
+
+            <!-- TODO Eliminar Producto -->
+            <div class="eliminar">
+                <h2>Eliminar</h2>
+                <form>
+                    <label>Nombre del Producto</label>
+                    <select id="productoEliminar">
+                        <option value="">---</option>
+                    </select>
+
+                    <input class="button" type="button" id="botonEliminar" value="Eliminar">
+                </form>
+            </div>
+        </div>
+
+        <div class="contenedorMensaje">
+            <div id="mensaje"></div>
+        </div>
+
+        <div class="contenedorProductos">
+            <h2>Productos</h2>
+            <div class="mostrarProductos" id="mostrarProductos">
+
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="/subpages/ADMIN/admin_script.js"></script>
+
+</body>
+</html>

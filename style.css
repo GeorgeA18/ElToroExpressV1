@@ -45,41 +45,26 @@ main{
 }
 
 section{
-    margin-bottom: 20px;
     background-color: rgb(121, 0, 220);
 }
 
 
-.servicios_container .ventas{
-    height: 300px;
-    display: grid;
-    grid-template-rows: 20% auto;
 
-}
 
-.servicios_container .ventas h1{
-    grid-row: 1;
-    grid-column: span 2;
 
-}
-
-.servicios_container .servicio-despacho, .servicios-bandejas, .servicio-rebanadas{
-    height: 300px;
-    width: auto;
-    display: grid;
-    grid-template-columns: 50% 50%;
-
-}
 
 
 /* ! solo para ver la distribucion de las section y div */
+/* 
 section{
     border: 6px solid green;
 }
-
+ */
+/* 
 section article{
     border: 10px solid rgb(0, 21, 255);
 }
+ */
 /* 
 section div{
     border: 2px solid yellow;
@@ -90,9 +75,9 @@ section div{
 /* ? como la resolucion sobrepasa los 600px de width se aplica */
 /* Estilos para tabletas */
 
-@media (min-width: 370px) {
+@media (min-width: 390px) {
     .header .nav_bar{  
-        background-color: #ff0000;
+        background-color: rgb(118, 118, 118);
     }
 }
 @media (min-width: 820px) {
